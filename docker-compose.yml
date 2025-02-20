@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: backend-container
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    env_file:
+      - ./backend/.env  # Load environment variables from .env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  frontend:
+    build: ./frontend
+    container_name: frontend-container
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      REACT_APP_API_URL: "http://backend:5000"
+
+  db:
+    image: mysql:8.0
+    container_name: mysql-container
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Himani@2937
+      MYSQL_DATABASE: blog
+      MYSQL_USER: Himani_Thapa
+      MYSQL_PASSWORD: Himani@2937
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

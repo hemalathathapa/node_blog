@@ -1,0 +1,104 @@
+/* Center the entire blog container */
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers blog cards horizontally */
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Style for each blog card */
+.blog-card {
+  width: 60%; /* Adjust the width to fit nicely */
+  max-width: 600px; /* Prevents it from being too large */
+  border: 1px solid #ccc;
+  padding: 15px; /* Add padding inside the card */
+  margin: 15px auto; /* Centers the blog card */
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  text-align: center; /* Centers text inside */
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: #b54071;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.read-more-btn:hover {
+  background-color: #b0577c;
+}
+
+/* Blog Actions - Likes & Comments */
+.blog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Like Button */
+.like-btn {
+  color: rgb(16, 1, 1);
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.like-btn:hover {
+  background-color: #3ba4c4;
+}
+
+/* Comment Icon */
+.comment-icon {
+  font-size: 18px;
+  color: #007bff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.comment-icon:hover {
+  color: #0056b3;
+}
+
+/* Comments Section */
+.comments-section {
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Comment Input */
+.comment-input {
+  width: 80%;
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Comment Button */
+.comment-btn {
+  background-color: #ffc107;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.comment-btn:hover {
+  background-color: #e0a800;
+}
